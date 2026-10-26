@@ -38,7 +38,7 @@ Partial Class Form1
         Label5 = New Label()
         pnlActions = New Panel()
         lblStatus = New StatusStrip()
-        ToolStripStatusLabel1 = New ToolStripStatusLabel()
+        lblStatusLabel = New ToolStripStatusLabel()
         flowActions = New FlowLayoutPanel()
         btnCancel = New Button()
         btnSave = New Button()
@@ -216,18 +216,18 @@ Partial Class Form1
         ' lblStatus
         ' 
         lblStatus.ImageScalingSize = New Size(24, 24)
-        lblStatus.Items.AddRange(New ToolStripItem() {ToolStripStatusLabel1})
+        lblStatus.Items.AddRange(New ToolStripItem() {lblStatusLabel})
         lblStatus.Location = New Point(0, 43)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(673, 32)
         lblStatus.TabIndex = 1
         lblStatus.Text = "Ready"
         ' 
-        ' ToolStripStatusLabel1
+        ' lblStatusLabel
         ' 
-        ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        ToolStripStatusLabel1.Size = New Size(60, 25)
-        ToolStripStatusLabel1.Text = "Ready"
+        lblStatusLabel.Name = "lblStatusLabel"
+        lblStatusLabel.Size = New Size(60, 25)
+        lblStatusLabel.Text = "Ready"
         ' 
         ' flowActions
         ' 
@@ -348,9 +348,9 @@ Partial Class Form1
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClearToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
     Friend WithEvents Label5 As Label
     Friend WithEvents Errors As ErrorProvider
+    Friend WithEvents lblStatusLabel As ToolStripStatusLabel
 
 
 

@@ -121,6 +121,7 @@ Partial Class frmStudentDetails
         ' 
         ' Panel1
         ' 
+        Panel1.BackColor = Color.White
         Panel1.Location = New Point(563, 145)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(300, 268)
