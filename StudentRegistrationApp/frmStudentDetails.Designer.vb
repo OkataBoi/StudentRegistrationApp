@@ -30,6 +30,7 @@ Partial Class frmStudentDetails
         lblEmail = New Label()
         lblProgramme = New Label()
         lblFullName = New Label()
+        Panel1 = New Panel()
         pnlHeader.SuspendLayout()
         SuspendLayout()
         ' 
@@ -68,7 +69,7 @@ Partial Class frmStudentDetails
         ' 
         lblAddress.AutoSize = True
         lblAddress.Font = New Font("Segoe UI", 15F)
-        lblAddress.Location = New Point(330, 424)
+        lblAddress.Location = New Point(287, 458)
         lblAddress.Name = "lblAddress"
         lblAddress.Size = New Size(125, 41)
         lblAddress.TabIndex = 10
@@ -79,7 +80,7 @@ Partial Class frmStudentDetails
         lblBirthDate.Anchor = AnchorStyles.Left
         lblBirthDate.AutoSize = True
         lblBirthDate.Font = New Font("Segoe UI", 15F)
-        lblBirthDate.Location = New Point(271, 348)
+        lblBirthDate.Location = New Point(256, 372)
         lblBirthDate.Name = "lblBirthDate"
         lblBirthDate.Size = New Size(184, 41)
         lblBirthDate.TabIndex = 3
@@ -90,7 +91,7 @@ Partial Class frmStudentDetails
         lblEmail.Anchor = AnchorStyles.Left
         lblEmail.AutoSize = True
         lblEmail.Font = New Font("Segoe UI", 15F)
-        lblEmail.Location = New Point(290, 279)
+        lblEmail.Location = New Point(287, 290)
         lblEmail.Name = "lblEmail"
         lblEmail.Size = New Size(88, 41)
         lblEmail.TabIndex = 2
@@ -101,7 +102,7 @@ Partial Class frmStudentDetails
         lblProgramme.Anchor = AnchorStyles.Left
         lblProgramme.AutoSize = True
         lblProgramme.Font = New Font("Segoe UI", 15F)
-        lblProgramme.Location = New Point(252, 201)
+        lblProgramme.Location = New Point(247, 220)
         lblProgramme.Name = "lblProgramme"
         lblProgramme.Size = New Size(174, 41)
         lblProgramme.TabIndex = 1
@@ -112,23 +113,31 @@ Partial Class frmStudentDetails
         lblFullName.Anchor = AnchorStyles.Left
         lblFullName.AutoSize = True
         lblFullName.Font = New Font("Segoe UI", 15F)
-        lblFullName.Location = New Point(330, 118)
+        lblFullName.Location = New Point(256, 145)
         lblFullName.Name = "lblFullName"
         lblFullName.Size = New Size(146, 41)
         lblFullName.TabIndex = 0
         lblFullName.Text = "Full name"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Location = New Point(563, 145)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(300, 268)
+        Panel1.TabIndex = 11
         ' 
         ' frmStudentDetails
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(906, 572)
-        Controls.Add(lblBirthDate)
-        Controls.Add(lblEmail)
+        Controls.Add(Panel1)
         Controls.Add(lblProgramme)
         Controls.Add(lblFullName)
-        Controls.Add(btnClose)
         Controls.Add(lblAddress)
+        Controls.Add(lblEmail)
+        Controls.Add(btnClose)
+        Controls.Add(lblBirthDate)
         Controls.Add(pnlHeader)
         MinimumSize = New Size(720, 520)
         Name = "frmStudentDetails"
@@ -146,4 +155,5 @@ Partial Class frmStudentDetails
     Friend WithEvents lblEmail As Label
     Friend WithEvents lblProgramme As Label
     Friend WithEvents lblFullName As Label
+    Friend WithEvents Panel1 As Panel
 End Class
