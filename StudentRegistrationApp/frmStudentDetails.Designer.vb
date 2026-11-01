@@ -14,147 +14,189 @@ Partial Class frmStudentDetails
         End Try
     End Sub
 
-    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        pnlHeader = New Panel()
-        lblTitle = New Label()
+        pnlDetailsCard = New Panel()
         btnClose = New Button()
         lblAddress = New Label()
+        lblAddressCaption = New Label()
         lblBirthDate = New Label()
+        lblBirthDateCaption = New Label()
         lblEmail = New Label()
+        lblEmailCaption = New Label()
         lblProgramme = New Label()
         lblFullName = New Label()
-        Panel1 = New Panel()
-        pnlHeader.SuspendLayout()
+        picAvatar = New PictureBox()
+        pnlDetailsCard.SuspendLayout()
+        CType(picAvatar, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' pnlHeader
+        ' pnlDetailsCard
         ' 
-        pnlHeader.BackColor = Color.RoyalBlue
-        pnlHeader.Controls.Add(lblTitle)
-        pnlHeader.Dock = DockStyle.Top
-        pnlHeader.Location = New Point(0, 0)
-        pnlHeader.Name = "pnlHeader"
-        pnlHeader.Size = New Size(906, 85)
-        pnlHeader.TabIndex = 2
-        ' 
-        ' lblTitle
-        ' 
-        lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.ForeColor = Color.White
-        lblTitle.Location = New Point(12, 22)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(330, 48)
-        lblTitle.TabIndex = 0
-        lblTitle.Text = "STUDENT DETAILS"
+        pnlDetailsCard.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        pnlDetailsCard.BackColor = Color.White
+        pnlDetailsCard.Controls.Add(btnClose)
+        pnlDetailsCard.Controls.Add(lblAddress)
+        pnlDetailsCard.Controls.Add(lblAddressCaption)
+        pnlDetailsCard.Controls.Add(lblBirthDate)
+        pnlDetailsCard.Controls.Add(lblBirthDateCaption)
+        pnlDetailsCard.Controls.Add(lblEmail)
+        pnlDetailsCard.Controls.Add(lblEmailCaption)
+        pnlDetailsCard.Controls.Add(lblProgramme)
+        pnlDetailsCard.Controls.Add(lblFullName)
+        pnlDetailsCard.Controls.Add(picAvatar)
+        pnlDetailsCard.Location = New Point(115, 35)
+        pnlDetailsCard.Name = "pnlDetailsCard"
+        pnlDetailsCard.Padding = New Padding(20)
+        pnlDetailsCard.Size = New Size(670, 650)
+        pnlDetailsCard.TabIndex = 0
         ' 
         ' btnClose
         ' 
-        btnClose.BackColor = Color.RoyalBlue
-        btnClose.Location = New Point(707, 500)
+        btnClose.Anchor = AnchorStyles.Bottom
+        btnClose.BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
+        btnClose.FlatAppearance.BorderSize = 0
+        btnClose.FlatStyle = FlatStyle.Flat
+        btnClose.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnClose.ForeColor = Color.FromArgb(CByte(55), CByte(65), CByte(81))
+        btnClose.Location = New Point(265, 559)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(112, 47)
-        btnClose.TabIndex = 3
+        btnClose.Padding = New Padding(10, 5, 10, 5)
+        btnClose.Size = New Size(151, 48)
+        btnClose.TabIndex = 9
         btnClose.Text = "Close"
         btnClose.UseVisualStyleBackColor = False
         ' 
         ' lblAddress
         ' 
-        lblAddress.AutoSize = True
-        lblAddress.Font = New Font("Segoe UI", 15F)
-        lblAddress.Location = New Point(287, 458)
+        lblAddress.AutoEllipsis = True
+        lblAddress.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblAddress.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblAddress.Location = New Point(40, 357)
         lblAddress.Name = "lblAddress"
-        lblAddress.Size = New Size(125, 41)
-        lblAddress.TabIndex = 10
+        lblAddress.Size = New Size(590, 50)
+        lblAddress.TabIndex = 8
         lblAddress.Text = "Address"
+        lblAddress.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' lblAddressCaption
+        ' 
+        lblAddressCaption.AutoSize = True
+        lblAddressCaption.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblAddressCaption.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
+        lblAddressCaption.Location = New Point(40, 330)
+        lblAddressCaption.Name = "lblAddressCaption"
+        lblAddressCaption.Size = New Size(77, 25)
+        lblAddressCaption.TabIndex = 7
+        lblAddressCaption.Text = "Address"
         ' 
         ' lblBirthDate
         ' 
-        lblBirthDate.Anchor = AnchorStyles.Left
-        lblBirthDate.AutoSize = True
-        lblBirthDate.Font = New Font("Segoe UI", 15F)
-        lblBirthDate.Location = New Point(256, 372)
+        lblBirthDate.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblBirthDate.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblBirthDate.Location = New Point(355, 262)
         lblBirthDate.Name = "lblBirthDate"
-        lblBirthDate.Size = New Size(184, 41)
-        lblBirthDate.TabIndex = 3
+        lblBirthDate.Size = New Size(260, 36)
+        lblBirthDate.TabIndex = 6
         lblBirthDate.Text = "Date of Birth"
+        lblBirthDate.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' lblBirthDateCaption
+        ' 
+        lblBirthDateCaption.AutoSize = True
+        lblBirthDateCaption.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblBirthDateCaption.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
+        lblBirthDateCaption.Location = New Point(355, 235)
+        lblBirthDateCaption.Name = "lblBirthDateCaption"
+        lblBirthDateCaption.Size = New Size(112, 25)
+        lblBirthDateCaption.TabIndex = 5
+        lblBirthDateCaption.Text = "Date of Birth"
         ' 
         ' lblEmail
         ' 
-        lblEmail.Anchor = AnchorStyles.Left
-        lblEmail.AutoSize = True
-        lblEmail.Font = New Font("Segoe UI", 15F)
-        lblEmail.Location = New Point(287, 290)
+        lblEmail.AutoEllipsis = True
+        lblEmail.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblEmail.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblEmail.Location = New Point(40, 262)
         lblEmail.Name = "lblEmail"
-        lblEmail.Size = New Size(88, 41)
-        lblEmail.TabIndex = 2
+        lblEmail.Size = New Size(270, 36)
+        lblEmail.TabIndex = 4
         lblEmail.Text = "Email"
+        lblEmail.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' lblEmailCaption
+        ' 
+        lblEmailCaption.AutoSize = True
+        lblEmailCaption.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblEmailCaption.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
+        lblEmailCaption.Location = New Point(40, 235)
+        lblEmailCaption.Name = "lblEmailCaption"
+        lblEmailCaption.Size = New Size(124, 25)
+        lblEmailCaption.TabIndex = 3
+        lblEmailCaption.Text = "Email Address"
         ' 
         ' lblProgramme
         ' 
-        lblProgramme.Anchor = AnchorStyles.Left
-        lblProgramme.AutoSize = True
-        lblProgramme.Font = New Font("Segoe UI", 15F)
-        lblProgramme.Location = New Point(247, 220)
+        lblProgramme.AutoEllipsis = True
+        lblProgramme.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblProgramme.ForeColor = Color.FromArgb(CByte(37), CByte(99), CByte(235))
+        lblProgramme.Location = New Point(40, 168)
         lblProgramme.Name = "lblProgramme"
-        lblProgramme.Size = New Size(174, 41)
-        lblProgramme.TabIndex = 1
+        lblProgramme.Size = New Size(590, 32)
+        lblProgramme.TabIndex = 2
         lblProgramme.Text = "Programme"
+        lblProgramme.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' lblFullName
         ' 
-        lblFullName.Anchor = AnchorStyles.Left
-        lblFullName.AutoSize = True
-        lblFullName.Font = New Font("Segoe UI", 15F)
-        lblFullName.Location = New Point(256, 145)
+        lblFullName.AutoEllipsis = True
+        lblFullName.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblFullName.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblFullName.Location = New Point(40, 120)
         lblFullName.Name = "lblFullName"
-        lblFullName.Size = New Size(146, 41)
-        lblFullName.TabIndex = 0
+        lblFullName.Size = New Size(590, 45)
+        lblFullName.TabIndex = 1
         lblFullName.Text = "Full name"
+        lblFullName.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Panel1
+        ' picAvatar
         ' 
-        Panel1.BackColor = Color.White
-        Panel1.Location = New Point(563, 145)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(300, 268)
-        Panel1.TabIndex = 11
+        picAvatar.BackColor = Color.FromArgb(CByte(229), CByte(231), CByte(235))
+        picAvatar.Location = New Point(295, 30)
+        picAvatar.Name = "picAvatar"
+        picAvatar.Size = New Size(80, 80)
+        picAvatar.SizeMode = PictureBoxSizeMode.Zoom
+        picAvatar.TabIndex = 0
+        picAvatar.TabStop = False
         ' 
         ' frmStudentDetails
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(906, 572)
-        Controls.Add(Panel1)
-        Controls.Add(lblProgramme)
-        Controls.Add(lblFullName)
-        Controls.Add(lblAddress)
-        Controls.Add(lblEmail)
-        Controls.Add(btnClose)
-        Controls.Add(lblBirthDate)
-        Controls.Add(pnlHeader)
-        MinimumSize = New Size(720, 520)
+        BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
+        ClientSize = New Size(900, 720)
+        Controls.Add(pnlDetailsCard)
+        MinimumSize = New Size(820, 650)
         Name = "frmStudentDetails"
-        Text = "frmStudentDetails"
-        pnlHeader.ResumeLayout(False)
-        pnlHeader.PerformLayout()
+        StartPosition = FormStartPosition.CenterParent
+        Text = "Student Details"
+        pnlDetailsCard.ResumeLayout(False)
+        pnlDetailsCard.PerformLayout()
+        CType(picAvatar, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-    Friend WithEvents pnlHeader As Panel
-    Friend WithEvents lblTitle As Label
-    Friend WithEvents btnClose As Button
-    Friend WithEvents lblAddress As Label
-    Friend WithEvents lblBirthDate As Label
-    Friend WithEvents lblEmail As Label
-    Friend WithEvents lblProgramme As Label
+
+    Friend WithEvents pnlDetailsCard As Panel
+    Friend WithEvents picAvatar As PictureBox
     Friend WithEvents lblFullName As Label
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblProgramme As Label
+    Friend WithEvents lblEmailCaption As Label
+    Friend WithEvents lblEmail As Label
+    Friend WithEvents lblBirthDateCaption As Label
+    Friend WithEvents lblBirthDate As Label
+    Friend WithEvents lblAddressCaption As Label
+    Friend WithEvents lblAddress As Label
+    Friend WithEvents btnClose As Button
 End Class

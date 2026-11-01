@@ -1,17 +1,15 @@
 ﻿Imports System.ComponentModel
 
 Public Class frmDashboard
-    ' From Slide 18: Keep the list in frmDashboard
     Private ReadOnly _students As New BindingList(Of StudentRecord)
 
-    ' From Slide 18: Dashboard Load
     Private Sub frmDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lstStudents.DataSource = _students
-        label2.Text = "0"
+        dgvStudents.DataSource = _students
+        lblStudentCount.Text = "Students registered: 0"
+        lblStatusMessage.Text = ""
         btnViewStudent.Enabled = False
     End Sub
 
-    ' From Slide 20: Open the registration dialog
     Private Sub btnNewRegistration_Click(sender As Object, e As EventArgs) Handles btnNewRegistration.Click
         Using form As New Form1()
             If form.ShowDialog(Me) = DialogResult.OK Then
@@ -21,19 +19,21 @@ Public Class frmDashboard
         End Using
     End Sub
 
-    ' From Slide 24: Refresh the dashboard
     Private Sub RefreshDashboard()
-        label2.Text = _students.Count.ToString()
+        lblStudentCount.Text = $"Students registered: {_students.Count}"
         If _students.Count > 0 Then
-            lstStudents.SelectedIndex = _students.Count - 1
+            dgvStudents.ClearSelection()
+            dgvStudents.Rows(_students.Count - 1).Selected = True
+            dgvStudents.CurrentCell = dgvStudents.Rows(_students.Count - 1).Cells(0)
             btnViewStudent.Enabled = True
-            label3.Text = "Student added successfully."
+            lblStatusMessage.Text = "Student added successfully."
         End If
     End Sub
 
-    ' From Slide 26: Open the selected student
     Private Sub btnViewStudent_Click(sender As Object, e As EventArgs) Handles btnViewStudent.Click
-        Dim student = TryCast(lstStudents.SelectedItem, StudentRecord)
+        If dgvStudents.CurrentRow Is Nothing Then Return
+
+        Dim student = TryCast(dgvStudents.CurrentRow.DataBoundItem, StudentRecord)
         If student Is Nothing Then Return
 
         Using form As New frmStudentDetails(student)
@@ -41,7 +41,7 @@ Public Class frmDashboard
         End Using
     End Sub
 
-    Private Sub lblStatus_Click(sender As Object, e As EventArgs) Handles label3.Click
+    Private Sub lblStatusMessage_Click(sender As Object, e As EventArgs) Handles lblStatusMessage.Click
 
     End Sub
 End Class

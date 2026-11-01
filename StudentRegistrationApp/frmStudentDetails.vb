@@ -19,6 +19,6 @@
     End Sub
 
     Private Sub lblProgramme_Click(sender As Object, e As EventArgs) Handles lblProgramme.Click
-
+git commit -m "Modernize student dashboard and profile details UI"git commit -m "Modernize student dashboard and profile details UI"git commit -m "Modernize student dashboard and profile details UI"
     End Sub
 End Class
