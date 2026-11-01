@@ -28,9 +28,7 @@ Partial Class frmStudentDetails
         lblEmailCaption = New Label()
         lblProgramme = New Label()
         lblFullName = New Label()
-        picAvatar = New PictureBox()
         pnlDetailsCard.SuspendLayout()
-        CType(picAvatar, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' pnlDetailsCard
@@ -46,7 +44,6 @@ Partial Class frmStudentDetails
         pnlDetailsCard.Controls.Add(lblEmailCaption)
         pnlDetailsCard.Controls.Add(lblProgramme)
         pnlDetailsCard.Controls.Add(lblFullName)
-        pnlDetailsCard.Controls.Add(picAvatar)
         pnlDetailsCard.Location = New Point(115, 35)
         pnlDetailsCard.Name = "pnlDetailsCard"
         pnlDetailsCard.Padding = New Padding(20)
@@ -59,7 +56,7 @@ Partial Class frmStudentDetails
         btnClose.BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
         btnClose.FlatAppearance.BorderSize = 0
         btnClose.FlatStyle = FlatStyle.Flat
-        btnClose.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnClose.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnClose.ForeColor = Color.FromArgb(CByte(55), CByte(65), CByte(81))
         btnClose.Location = New Point(265, 559)
         btnClose.Name = "btnClose"
@@ -72,7 +69,7 @@ Partial Class frmStudentDetails
         ' lblAddress
         ' 
         lblAddress.AutoEllipsis = True
-        lblAddress.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblAddress.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblAddress.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblAddress.Location = New Point(40, 357)
         lblAddress.Name = "lblAddress"
@@ -84,7 +81,7 @@ Partial Class frmStudentDetails
         ' lblAddressCaption
         ' 
         lblAddressCaption.AutoSize = True
-        lblAddressCaption.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblAddressCaption.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblAddressCaption.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
         lblAddressCaption.Location = New Point(40, 330)
         lblAddressCaption.Name = "lblAddressCaption"
@@ -94,7 +91,7 @@ Partial Class frmStudentDetails
         ' 
         ' lblBirthDate
         ' 
-        lblBirthDate.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblBirthDate.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblBirthDate.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblBirthDate.Location = New Point(355, 262)
         lblBirthDate.Name = "lblBirthDate"
@@ -106,7 +103,7 @@ Partial Class frmStudentDetails
         ' lblBirthDateCaption
         ' 
         lblBirthDateCaption.AutoSize = True
-        lblBirthDateCaption.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblBirthDateCaption.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblBirthDateCaption.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
         lblBirthDateCaption.Location = New Point(355, 235)
         lblBirthDateCaption.Name = "lblBirthDateCaption"
@@ -117,7 +114,7 @@ Partial Class frmStudentDetails
         ' lblEmail
         ' 
         lblEmail.AutoEllipsis = True
-        lblEmail.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblEmail.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblEmail.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblEmail.Location = New Point(40, 262)
         lblEmail.Name = "lblEmail"
@@ -129,7 +126,7 @@ Partial Class frmStudentDetails
         ' lblEmailCaption
         ' 
         lblEmailCaption.AutoSize = True
-        lblEmailCaption.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblEmailCaption.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblEmailCaption.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
         lblEmailCaption.Location = New Point(40, 235)
         lblEmailCaption.Name = "lblEmailCaption"
@@ -140,7 +137,7 @@ Partial Class frmStudentDetails
         ' lblProgramme
         ' 
         lblProgramme.AutoEllipsis = True
-        lblProgramme.Font = New Font("Segoe UI", 11.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblProgramme.Font = New Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblProgramme.ForeColor = Color.FromArgb(CByte(37), CByte(99), CByte(235))
         lblProgramme.Location = New Point(40, 168)
         lblProgramme.Name = "lblProgramme"
@@ -152,7 +149,7 @@ Partial Class frmStudentDetails
         ' lblFullName
         ' 
         lblFullName.AutoEllipsis = True
-        lblFullName.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblFullName.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblFullName.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblFullName.Location = New Point(40, 120)
         lblFullName.Name = "lblFullName"
@@ -161,19 +158,9 @@ Partial Class frmStudentDetails
         lblFullName.Text = "Full name"
         lblFullName.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' picAvatar
-        ' 
-        picAvatar.BackColor = Color.FromArgb(CByte(229), CByte(231), CByte(235))
-        picAvatar.Location = New Point(295, 30)
-        picAvatar.Name = "picAvatar"
-        picAvatar.Size = New Size(80, 80)
-        picAvatar.SizeMode = PictureBoxSizeMode.Zoom
-        picAvatar.TabIndex = 0
-        picAvatar.TabStop = False
-        ' 
         ' frmStudentDetails
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
         ClientSize = New Size(900, 720)
@@ -184,12 +171,10 @@ Partial Class frmStudentDetails
         Text = "Student Details"
         pnlDetailsCard.ResumeLayout(False)
         pnlDetailsCard.PerformLayout()
-        CType(picAvatar, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents pnlDetailsCard As Panel
-    Friend WithEvents picAvatar As PictureBox
     Friend WithEvents lblFullName As Label
     Friend WithEvents lblProgramme As Label
     Friend WithEvents lblEmailCaption As Label
