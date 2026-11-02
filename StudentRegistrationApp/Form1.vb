@@ -13,12 +13,8 @@
 
     ' Full Name Validation
     Private Sub txtFullName_Validating(sender As Object, e As ComponentModel.CancelEventArgs) Handles txtFullName.Validating
-        If String.IsNullOrWhiteSpace(txtFullName.Text) Then
-            Errors.SetError(txtFullName, "Enter the student's full name.")
-            e.Cancel = True
-        Else
-            Errors.SetError(txtFullName, String.Empty)
-        End If
+        e.Cancel = Not ValidationRules.HasText(txtFullName.Text)
+        Errors.SetError(txtFullName, If(e.Cancel, "Enter the student's full name.", String.Empty))
     End Sub
 
     ' Programme Selection Validation
@@ -33,10 +29,13 @@
 
     ' Email Format Validation
     Private Sub txtEmail_Validating(sender As Object, e As ComponentModel.CancelEventArgs) Handles txtEmail.Validating
-        Dim email = txtEmail.Text.Trim()
-        Dim valid = email.Contains("@") AndAlso email.Contains(".")
-        Errors.SetError(txtEmail, If(valid, "", "Enter a valid email."))
-        e.Cancel = Not valid
+        e.Cancel = Not ValidationRules.IsEmailValid(txtEmail.Text)
+        Errors.SetError(txtEmail, If(e.Cancel, "Enter an email such as ama@example.com.", String.Empty))
+    End Sub
+
+    Private Sub txtPhone_Validating(sender As Object, e As ComponentModel.CancelEventArgs) Handles txtPhone.Validating
+        e.Cancel = Not ValidationRules.IsPhoneValid(txtPhone.Text)
+        Errors.SetError(txtPhone, If(e.Cancel, "Enter a phone number with exactly 10 digits.", String.Empty))
     End Sub
 
     ' Birth Date Validation
@@ -70,6 +69,7 @@
             .FullName = txtFullName.Text.Trim(),
             .Programme = cboProgramme.Text,
             .Email = txtEmail.Text.Trim(),
+            .Phone = txtPhone.Text.Trim(),
             .BirthDate = dtpBirthDate.Value.Date,
             .Address = txtAddress.Text.Trim()
         }
@@ -81,6 +81,7 @@
         txtFullName.Clear()
         cboProgramme.SelectedIndex = -1
         txtEmail.Clear()
+        txtPhone.Clear()
         dtpBirthDate.Value = Date.Today
         txtAddress.Clear()
         Errors.Clear()

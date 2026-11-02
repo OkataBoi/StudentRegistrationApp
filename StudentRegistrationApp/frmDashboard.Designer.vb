@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmDashboard
     Inherits System.Windows.Forms.Form
 
@@ -17,49 +17,57 @@ Partial Class frmDashboard
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         pnlSidebar = New Panel()
         btnNewRegistration = New Button()
         pnlMain = New Panel()
-        pnlContentCard = New Panel()
-        Button1 = New Button()
-        btnViewStudent = New Button()
+        pnlContent = New Panel()
+        pnlPreview = New Panel()
+        btnViewDetails = New Button()
+        studentSummary = New StudentSummaryControl()
+        lblPreviewTitle = New Label()
+        pnlListSection = New Panel()
+        dgvStudents = New DataGridView()
+        lblListTitle = New Label()
+        pnlFooter = New Panel()
         lblStatusMessage = New Label()
         lblStudentCount = New Label()
-        dgvStudents = New DataGridView()
-        lblRegisteredStudent = New Label()
         pnlHeader = New Panel()
-        lblNewRegistration = New Label()
+        lblDashboardTitle = New Label()
         pnlSidebar.SuspendLayout()
         pnlMain.SuspendLayout()
-        pnlContentCard.SuspendLayout()
+        pnlContent.SuspendLayout()
+        pnlPreview.SuspendLayout()
+        pnlListSection.SuspendLayout()
         CType(dgvStudents, ComponentModel.ISupportInitialize).BeginInit()
+        pnlFooter.SuspendLayout()
         pnlHeader.SuspendLayout()
         SuspendLayout()
         ' 
         ' pnlSidebar
         ' 
-        pnlSidebar.BackColor = SystemColors.MenuHighlight
+        pnlSidebar.BackColor = Color.FromArgb(CByte(30), CByte(41), CByte(59))
         pnlSidebar.Controls.Add(btnNewRegistration)
         pnlSidebar.Dock = DockStyle.Left
         pnlSidebar.Location = New Point(0, 0)
         pnlSidebar.Name = "pnlSidebar"
-        pnlSidebar.Size = New Size(200, 672)
+        pnlSidebar.Size = New Size(220, 700)
         pnlSidebar.TabIndex = 0
         ' 
         ' btnNewRegistration
         ' 
-        btnNewRegistration.BackColor = SystemColors.InfoText
+        btnNewRegistration.BackColor = Color.Transparent
         btnNewRegistration.Dock = DockStyle.Top
         btnNewRegistration.FlatAppearance.BorderSize = 0
         btnNewRegistration.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(37), CByte(99), CByte(235))
         btnNewRegistration.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(51), CByte(65), CByte(85))
         btnNewRegistration.FlatStyle = FlatStyle.Flat
-        btnNewRegistration.Font = New Font("Segoe UI", 10.0F)
+        btnNewRegistration.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Bold)
         btnNewRegistration.ForeColor = Color.White
         btnNewRegistration.Location = New Point(0, 0)
         btnNewRegistration.Name = "btnNewRegistration"
         btnNewRegistration.Padding = New Padding(16, 0, 0, 0)
-        btnNewRegistration.Size = New Size(200, 52)
+        btnNewRegistration.Size = New Size(220, 80)
         btnNewRegistration.TabIndex = 0
         btnNewRegistration.Text = "New Registration"
         btnNewRegistration.TextAlign = ContentAlignment.MiddleLeft
@@ -68,84 +76,90 @@ Partial Class frmDashboard
         ' pnlMain
         ' 
         pnlMain.BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
-        pnlMain.Controls.Add(pnlContentCard)
+        pnlMain.Controls.Add(pnlContent)
+        pnlMain.Controls.Add(pnlFooter)
         pnlMain.Controls.Add(pnlHeader)
         pnlMain.Dock = DockStyle.Fill
-        pnlMain.Location = New Point(200, 0)
+        pnlMain.Location = New Point(220, 0)
         pnlMain.Name = "pnlMain"
-        pnlMain.Size = New Size(890, 672)
+        pnlMain.Size = New Size(1040, 700)
         pnlMain.TabIndex = 1
         ' 
-        ' pnlContentCard
+        ' pnlContent
         ' 
-        pnlContentCard.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        pnlContentCard.BackColor = Color.White
-        pnlContentCard.Controls.Add(Button1)
-        pnlContentCard.Controls.Add(btnViewStudent)
-        pnlContentCard.Controls.Add(lblStatusMessage)
-        pnlContentCard.Controls.Add(lblStudentCount)
-        pnlContentCard.Controls.Add(dgvStudents)
-        pnlContentCard.Controls.Add(lblRegisteredStudent)
-        pnlContentCard.Location = New Point(60, 90)
-        pnlContentCard.Name = "pnlContentCard"
-        pnlContentCard.Padding = New Padding(20)
-        pnlContentCard.Size = New Size(770, 540)
-        pnlContentCard.TabIndex = 3
+        pnlContent.Controls.Add(pnlPreview)
+        pnlContent.Controls.Add(pnlListSection)
+        pnlContent.Dock = DockStyle.Fill
+        pnlContent.Location = New Point(0, 80)
+        pnlContent.Name = "pnlContent"
+        pnlContent.Padding = New Padding(24)
+        pnlContent.Size = New Size(1040, 540)
+        pnlContent.TabIndex = 3
         ' 
-        ' Button1
+        ' pnlPreview
         ' 
-        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        Button1.BackColor = Color.FromArgb(CByte(229), CByte(231), CByte(235))
-        Button1.Enabled = False
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.ForeColor = Color.Black
-        Button1.Location = New Point(20, 455)
-        Button1.Name = "Button1"
-        Button1.Padding = New Padding(5, 0, 15, 0)
-        Button1.Size = New Size(224, 46)
-        Button1.TabIndex = 7
-        Button1.Text = "Close the details form"
-        Button1.UseVisualStyleBackColor = False
+        pnlPreview.BackColor = Color.White
+        pnlPreview.BorderStyle = BorderStyle.FixedSingle
+        pnlPreview.Controls.Add(btnViewDetails)
+        pnlPreview.Controls.Add(studentSummary)
+        pnlPreview.Controls.Add(lblPreviewTitle)
+        pnlPreview.Dock = DockStyle.Right
+        pnlPreview.Location = New Point(556, 24)
+        pnlPreview.Name = "pnlPreview"
+        pnlPreview.Padding = New Padding(24)
+        pnlPreview.Size = New Size(460, 492)
+        pnlPreview.TabIndex = 1
         ' 
-        ' btnViewStudent
+        ' btnViewDetails
         ' 
-        btnViewStudent.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        btnViewStudent.BackColor = Color.FromArgb(CByte(37), CByte(99), CByte(235))
-        btnViewStudent.Enabled = False
-        btnViewStudent.FlatAppearance.BorderSize = 0
-        btnViewStudent.FlatStyle = FlatStyle.Flat
-        btnViewStudent.ForeColor = Color.White
-        btnViewStudent.Location = New Point(526, 455)
-        btnViewStudent.Name = "btnViewStudent"
-        btnViewStudent.Padding = New Padding(5, 0, 15, 0)
-        btnViewStudent.Size = New Size(224, 48)
-        btnViewStudent.TabIndex = 3
-        btnViewStudent.Text = "Open selected student"
-        btnViewStudent.UseVisualStyleBackColor = False
+        btnViewDetails.BackColor = Color.FromArgb(CByte(37), CByte(99), CByte(235))
+        btnViewDetails.Dock = DockStyle.Bottom
+        btnViewDetails.FlatAppearance.BorderSize = 0
+        btnViewDetails.FlatStyle = FlatStyle.Flat
+        btnViewDetails.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnViewDetails.ForeColor = Color.White
+        btnViewDetails.Location = New Point(24, 398)
+        btnViewDetails.Name = "btnViewDetails"
+        btnViewDetails.Padding = New Padding(0, 8, 0, 8)
+        btnViewDetails.Size = New Size(410, 68)
+        btnViewDetails.TabIndex = 2
+        btnViewDetails.Text = "View Details"
+        btnViewDetails.UseVisualStyleBackColor = False
         ' 
-        ' lblStatusMessage
+        ' studentSummary
         ' 
-        lblStatusMessage.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        lblStatusMessage.AutoSize = True
-        lblStatusMessage.Font = New Font("Segoe UI", 10.0F)
-        lblStatusMessage.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
-        lblStatusMessage.Location = New Point(20, 422)
-        lblStatusMessage.Name = "lblStatusMessage"
-        lblStatusMessage.Size = New Size(0, 28)
-        lblStatusMessage.TabIndex = 4
+        studentSummary.BackColor = Color.White
+        studentSummary.BorderStyle = BorderStyle.FixedSingle
+        studentSummary.Dock = DockStyle.Top
+        studentSummary.Location = New Point(24, 54)
+        studentSummary.Name = "studentSummary"
+        studentSummary.Size = New Size(410, 234)
+        studentSummary.TabIndex = 1
         ' 
-        ' lblStudentCount
+        ' lblPreviewTitle
         ' 
-        lblStudentCount.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        lblStudentCount.AutoSize = True
-        lblStudentCount.Font = New Font("Segoe UI", 10.0F)
-        lblStudentCount.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
-        lblStudentCount.Location = New Point(20, 390)
-        lblStudentCount.Name = "lblStudentCount"
-        lblStudentCount.Size = New Size(201, 28)
-        lblStudentCount.TabIndex = 2
-        lblStudentCount.Text = "Students registered: 0"
+        lblPreviewTitle.AutoSize = True
+        lblPreviewTitle.Dock = DockStyle.Top
+        lblPreviewTitle.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPreviewTitle.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblPreviewTitle.Location = New Point(24, 24)
+        lblPreviewTitle.Name = "lblPreviewTitle"
+        lblPreviewTitle.Size = New Size(183, 30)
+        lblPreviewTitle.TabIndex = 0
+        lblPreviewTitle.Text = "Student Preview"
+        ' 
+        ' pnlListSection
+        ' 
+        pnlListSection.BackColor = Color.White
+        pnlListSection.BorderStyle = BorderStyle.FixedSingle
+        pnlListSection.Controls.Add(dgvStudents)
+        pnlListSection.Controls.Add(lblListTitle)
+        pnlListSection.Dock = DockStyle.Fill
+        pnlListSection.Location = New Point(24, 24)
+        pnlListSection.Name = "pnlListSection"
+        pnlListSection.Padding = New Padding(24)
+        pnlListSection.Size = New Size(992, 492)
+        pnlListSection.TabIndex = 0
         ' 
         ' dgvStudents
         ' 
@@ -158,8 +172,17 @@ Partial Class frmDashboard
         dgvStudents.BorderStyle = BorderStyle.None
         dgvStudents.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
         dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvStudents.Font = New Font("Segoe UI", 10.0F)
-        dgvStudents.Location = New Point(20, 55)
+        dgvStudents.ColumnHeadersVisible = False
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Window
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(219), CByte(234), CByte(254))
+        DataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
+        dgvStudents.DefaultCellStyle = DataGridViewCellStyle1
+        dgvStudents.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dgvStudents.Location = New Point(24, 72)
         dgvStudents.MultiSelect = False
         dgvStudents.Name = "dgvStudents"
         dgvStudents.ReadOnly = True
@@ -167,72 +190,118 @@ Partial Class frmDashboard
         dgvStudents.RowHeadersWidth = 62
         dgvStudents.RowTemplate.Height = 32
         dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvStudents.Size = New Size(730, 315)
+        dgvStudents.Size = New Size(487, 393)
         dgvStudents.TabIndex = 1
         ' 
-        ' lblRegisteredStudent
+        ' lblListTitle
         ' 
-        lblRegisteredStudent.AutoSize = True
-        lblRegisteredStudent.Font = New Font("Segoe UI", 10.0F)
-        lblRegisteredStudent.Location = New Point(20, 20)
-        lblRegisteredStudent.Name = "lblRegisteredStudent"
-        lblRegisteredStudent.Size = New Size(246, 28)
-        lblRegisteredStudent.TabIndex = 6
-        lblRegisteredStudent.Text = "Display Registered Student"
+        lblListTitle.AutoSize = True
+        lblListTitle.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblListTitle.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblListTitle.Location = New Point(24, 24)
+        lblListTitle.Name = "lblListTitle"
+        lblListTitle.Size = New Size(221, 30)
+        lblListTitle.TabIndex = 0
+        lblListTitle.Text = "Registered Students"
+        ' 
+        ' pnlFooter
+        ' 
+        pnlFooter.BackColor = Color.White
+        pnlFooter.BorderStyle = BorderStyle.FixedSingle
+        pnlFooter.Controls.Add(lblStatusMessage)
+        pnlFooter.Controls.Add(lblStudentCount)
+        pnlFooter.Dock = DockStyle.Bottom
+        pnlFooter.Location = New Point(0, 620)
+        pnlFooter.Name = "pnlFooter"
+        pnlFooter.Padding = New Padding(24, 12, 24, 12)
+        pnlFooter.Size = New Size(1040, 80)
+        pnlFooter.TabIndex = 4
+        ' 
+        ' lblStatusMessage
+        ' 
+        lblStatusMessage.AutoSize = True
+        lblStatusMessage.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblStatusMessage.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
+        lblStatusMessage.Location = New Point(24, 40)
+        lblStatusMessage.Name = "lblStatusMessage"
+        lblStatusMessage.Size = New Size(0, 28)
+        lblStatusMessage.TabIndex = 1
+        ' 
+        ' lblStudentCount
+        ' 
+        lblStudentCount.AutoSize = True
+        lblStudentCount.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblStudentCount.ForeColor = Color.FromArgb(CByte(75), CByte(85), CByte(99))
+        lblStudentCount.Location = New Point(24, 10)
+        lblStudentCount.Name = "lblStudentCount"
+        lblStudentCount.Size = New Size(201, 28)
+        lblStudentCount.TabIndex = 0
+        lblStudentCount.Text = "Students registered: 0"
         ' 
         ' pnlHeader
         ' 
-        pnlHeader.BackColor = Color.White
-        pnlHeader.Controls.Add(lblNewRegistration)
+        pnlHeader.BackColor = Color.RoyalBlue
+        pnlHeader.BorderStyle = BorderStyle.FixedSingle
+        pnlHeader.Controls.Add(lblDashboardTitle)
         pnlHeader.Dock = DockStyle.Top
         pnlHeader.Location = New Point(0, 0)
         pnlHeader.Name = "pnlHeader"
-        pnlHeader.Padding = New Padding(24, 0, 24, 0)
-        pnlHeader.Size = New Size(890, 60)
+        pnlHeader.Padding = New Padding(24, 16, 24, 16)
+        pnlHeader.Size = New Size(1040, 80)
         pnlHeader.TabIndex = 2
         ' 
-        ' lblNewRegistration
+        ' lblDashboardTitle
         ' 
-        lblNewRegistration.AutoSize = True
-        lblNewRegistration.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblNewRegistration.Location = New Point(24, 7)
-        lblNewRegistration.Name = "lblNewRegistration"
-        lblNewRegistration.Size = New Size(368, 48)
-        lblNewRegistration.TabIndex = 0
-        lblNewRegistration.Text = "NEW REGISTRATION"
+        lblDashboardTitle.AutoSize = True
+        lblDashboardTitle.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDashboardTitle.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
+        lblDashboardTitle.Location = New Point(24, 16)
+        lblDashboardTitle.Name = "lblDashboardTitle"
+        lblDashboardTitle.Size = New Size(629, 54)
+        lblDashboardTitle.TabIndex = 0
+        lblDashboardTitle.Text = "Student Registration Dashboard"
         ' 
         ' frmDashboard
         ' 
         AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
-        ClientSize = New Size(1090, 672)
+        ClientSize = New Size(1260, 700)
         Controls.Add(pnlMain)
         Controls.Add(pnlSidebar)
-        MinimumSize = New Size(900, 600)
+        MinimumSize = New Size(1200, 600)
         Name = "frmDashboard"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Student Registration Dashboard"
         pnlSidebar.ResumeLayout(False)
         pnlMain.ResumeLayout(False)
-        pnlContentCard.ResumeLayout(False)
-        pnlContentCard.PerformLayout()
+        pnlContent.ResumeLayout(False)
+        pnlPreview.ResumeLayout(False)
+        pnlPreview.PerformLayout()
+        pnlListSection.ResumeLayout(False)
+        pnlListSection.PerformLayout()
         CType(dgvStudents, ComponentModel.ISupportInitialize).EndInit()
+        pnlFooter.ResumeLayout(False)
+        pnlFooter.PerformLayout()
         pnlHeader.ResumeLayout(False)
         pnlHeader.PerformLayout()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents pnlSidebar As Panel
+    Friend WithEvents btnNewRegistration As Button
     Friend WithEvents pnlMain As Panel
     Friend WithEvents pnlHeader As Panel
-    Friend WithEvents pnlContentCard As Panel
-    Friend WithEvents btnNewRegistration As Button
+    Friend WithEvents pnlContent As Panel
+    Friend WithEvents pnlListSection As Panel
     Friend WithEvents dgvStudents As DataGridView
+    Friend WithEvents lblListTitle As Label
+    Friend WithEvents pnlPreview As Panel
+    Friend WithEvents studentSummary As StudentSummaryControl
+    Friend WithEvents lblPreviewTitle As Label
+    Friend WithEvents btnViewDetails As Button
+    Friend WithEvents lblDashboardTitle As Label
+    Friend WithEvents pnlFooter As Panel
     Friend WithEvents lblStudentCount As Label
     Friend WithEvents lblStatusMessage As Label
-    Friend WithEvents btnViewStudent As Button
-    Friend WithEvents lblNewRegistration As Label
-    Friend WithEvents lblRegisteredStudent As Label
-    Friend WithEvents Button1 As Button
 End Class

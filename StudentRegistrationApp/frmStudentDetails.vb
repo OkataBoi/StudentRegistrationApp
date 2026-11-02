@@ -7,17 +7,15 @@
     End Sub
 
     Private Sub frmStudentDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblFullName.Text = _student.FullName
-        lblProgramme.Text = _student.Programme
-        lblEmail.Text = _student.Email
-        lblBirthDate.Text = _student.BirthDate.ToShortDateString()
-        lblAddress.Text = _student.Address
+        lblNameValue.Text = _student.FullName
+        lblProgrammeValue.Text = _student.Programme
+        lblEmailValue.Text = _student.Email
+        lblPhoneValue.Text = _student.Phone
+        lblBirthDateValue.Text = _student.BirthDate.ToString("dd MMM yyyy")
+        lblAddressValue.Text = _student.Address
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Close()
-    End Sub
-
-    Private Sub lblProgramme_Click(sender As Object, e As EventArgs) Handles lblProgramme.Click
     End Sub
 End Class

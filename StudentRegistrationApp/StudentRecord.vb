@@ -2,6 +2,7 @@
     Public Property FullName As String
     Public Property Programme As String
     Public Property Email As String
+    Public Property Phone As String
     Public Property BirthDate As Date
     Public Property Address As String
 

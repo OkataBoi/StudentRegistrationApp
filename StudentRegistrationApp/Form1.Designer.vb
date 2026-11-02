@@ -33,9 +33,11 @@ Partial Class Form1
         txtFullName = New TextBox()
         cboProgramme = New ComboBox()
         txtEmail = New TextBox()
+        txtPhone = New TextBox()
         dtpBirthDate = New DateTimePicker()
         txtAddress = New TextBox()
         Label5 = New Label()
+        Label6 = New Label()
         pnlActions = New Panel()
         lblStatus = New StatusStrip()
         lblStatusLabel = New ToolStripStatusLabel()
@@ -69,7 +71,7 @@ Partial Class Form1
         ' lblTitle
         ' 
         lblTitle.AutoSize = True
-        lblTitle.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTitle.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTitle.ForeColor = Color.White
         lblTitle.Location = New Point(3, 9)
         lblTitle.Name = "lblTitle"
@@ -81,8 +83,8 @@ Partial Class Form1
         ' 
         layoutForm.AutoSize = True
         layoutForm.ColumnCount = 2
-        layoutForm.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35F))
-        layoutForm.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65F))
+        layoutForm.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 35.0F))
+        layoutForm.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 65.0F))
         layoutForm.Controls.Add(Label1, 0, 0)
         layoutForm.Controls.Add(Label2, 0, 1)
         layoutForm.Controls.Add(Label3, 0, 2)
@@ -91,18 +93,21 @@ Partial Class Form1
         layoutForm.Controls.Add(cboProgramme, 1, 1)
         layoutForm.Controls.Add(txtEmail, 1, 2)
         layoutForm.Controls.Add(dtpBirthDate, 1, 3)
-        layoutForm.Controls.Add(txtAddress, 1, 4)
-        layoutForm.Controls.Add(Label5, 0, 4)
+        layoutForm.Controls.Add(txtPhone, 1, 4)
+        layoutForm.Controls.Add(txtAddress, 1, 5)
+        layoutForm.Controls.Add(Label5, 0, 5)
+        layoutForm.Controls.Add(Label6, 0, 4)
         layoutForm.Location = New Point(0, 103)
         layoutForm.Name = "layoutForm"
         layoutForm.Padding = New Padding(24)
-        layoutForm.RowCount = 5
-        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
-        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
-        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
-        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50F))
-        layoutForm.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
-        layoutForm.Size = New Size(903, 391)
+        layoutForm.RowCount = 6
+        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50.0F))
+        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50.0F))
+        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50.0F))
+        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50.0F))
+        layoutForm.RowStyles.Add(New RowStyle(SizeType.Absolute, 50.0F))
+        layoutForm.RowStyles.Add(New RowStyle(SizeType.Percent, 100.0F))
+        layoutForm.Size = New Size(903, 441)
         layoutForm.TabIndex = 0
         ' 
         ' Label1
@@ -174,33 +179,51 @@ Partial Class Form1
         txtEmail.Size = New Size(541, 31)
         txtEmail.TabIndex = 7
         ' 
+        ' txtPhone
+        ' 
+        txtPhone.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        txtPhone.Location = New Point(326, 230)
+        txtPhone.Margin = New Padding(3, 6, 12, 6)
+        txtPhone.Name = "txtPhone"
+        txtPhone.Size = New Size(541, 31)
+        txtPhone.TabIndex = 8
+        ' 
         ' dtpBirthDate
         ' 
         dtpBirthDate.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        dtpBirthDate.Location = New Point(326, 180)
+        dtpBirthDate.Location = New Point(326, 280)
         dtpBirthDate.Margin = New Padding(3, 6, 12, 6)
         dtpBirthDate.Name = "dtpBirthDate"
         dtpBirthDate.Size = New Size(541, 31)
-        dtpBirthDate.TabIndex = 8
+        dtpBirthDate.TabIndex = 9
         ' 
         ' txtAddress
         ' 
         txtAddress.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        txtAddress.Location = New Point(326, 230)
+        txtAddress.Location = New Point(326, 330)
         txtAddress.Margin = New Padding(3, 6, 12, 6)
         txtAddress.Multiline = True
         txtAddress.Name = "txtAddress"
         txtAddress.Size = New Size(541, 46)
-        txtAddress.TabIndex = 9
+        txtAddress.TabIndex = 10
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(27, 224)
+        Label5.Location = New Point(27, 324)
         Label5.Name = "Label5"
         Label5.Size = New Size(77, 25)
         Label5.TabIndex = 10
         Label5.Text = "Address"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(27, 274)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(62, 25)
+        Label6.TabIndex = 11
+        Label6.Text = "Phone"
         ' 
         ' pnlActions
         ' 
@@ -208,7 +231,7 @@ Partial Class Form1
         pnlActions.Controls.Add(lblStatus)
         pnlActions.Controls.Add(flowActions)
         pnlActions.Dock = DockStyle.Bottom
-        pnlActions.Location = New Point(0, 497)
+        pnlActions.Location = New Point(0, 575)
         pnlActions.Name = "pnlActions"
         pnlActions.Size = New Size(906, 75)
         pnlActions.TabIndex = 1
@@ -293,7 +316,7 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(906, 572)
         Controls.Add(pnlActions)
@@ -334,6 +357,7 @@ Partial Class Form1
     Friend WithEvents txtFullName As TextBox
     Friend WithEvents cboProgramme As ComboBox
     Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtPhone As TextBox
     Friend WithEvents dtpBirthDate As DateTimePicker
     Friend WithEvents txtAddress As TextBox
 
@@ -349,6 +373,7 @@ Partial Class Form1
     Friend WithEvents ClearToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
     Friend WithEvents Errors As ErrorProvider
     Friend WithEvents lblStatusLabel As ToolStripStatusLabel
 
