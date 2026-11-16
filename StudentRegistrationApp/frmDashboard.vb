@@ -3,6 +3,12 @@
 Public Class frmDashboard
     Private ReadOnly _students As New BindingList(Of StudentRecord)
 
+    Private Sub btnCheckRecords_Click(sender As Object, e As EventArgs) Handles btnCheckRecords.Click
+        Using form As New frmRecordCheck(New List(Of StudentRecord)(_students))
+            form.ShowDialog(Me)
+        End Using
+    End Sub
+
     Private Sub frmDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgvStudents.AutoGenerateColumns = False
         dgvStudents.Columns.Clear()

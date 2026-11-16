@@ -33,6 +33,7 @@ Partial Class frmDashboard
         lblStatusMessage = New Label()
         lblStudentCount = New Label()
         pnlHeader = New Panel()
+        btnCheckRecords = New Button()
         lblDashboardTitle = New Label()
         pnlSidebar.SuspendLayout()
         pnlMain.SuspendLayout()
@@ -62,7 +63,7 @@ Partial Class frmDashboard
         btnNewRegistration.FlatAppearance.MouseDownBackColor = Color.FromArgb(CByte(37), CByte(99), CByte(235))
         btnNewRegistration.FlatAppearance.MouseOverBackColor = Color.FromArgb(CByte(51), CByte(65), CByte(85))
         btnNewRegistration.FlatStyle = FlatStyle.Flat
-        btnNewRegistration.Font = New Font("Segoe UI Semibold", 10.0F, FontStyle.Bold)
+        btnNewRegistration.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold)
         btnNewRegistration.ForeColor = Color.White
         btnNewRegistration.Location = New Point(0, 0)
         btnNewRegistration.Name = "btnNewRegistration"
@@ -116,7 +117,7 @@ Partial Class frmDashboard
         btnViewDetails.Dock = DockStyle.Bottom
         btnViewDetails.FlatAppearance.BorderSize = 0
         btnViewDetails.FlatStyle = FlatStyle.Flat
-        btnViewDetails.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnViewDetails.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewDetails.ForeColor = Color.White
         btnViewDetails.Location = New Point(24, 398)
         btnViewDetails.Name = "btnViewDetails"
@@ -140,7 +141,7 @@ Partial Class frmDashboard
         ' 
         lblPreviewTitle.AutoSize = True
         lblPreviewTitle.Dock = DockStyle.Top
-        lblPreviewTitle.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPreviewTitle.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPreviewTitle.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblPreviewTitle.Location = New Point(24, 24)
         lblPreviewTitle.Name = "lblPreviewTitle"
@@ -175,13 +176,13 @@ Partial Class frmDashboard
         dgvStudents.ColumnHeadersVisible = False
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = SystemColors.Window
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle1.ForeColor = SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(219), CByte(234), CByte(254))
         DataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.False
         dgvStudents.DefaultCellStyle = DataGridViewCellStyle1
-        dgvStudents.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dgvStudents.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dgvStudents.Location = New Point(24, 72)
         dgvStudents.MultiSelect = False
         dgvStudents.Name = "dgvStudents"
@@ -196,7 +197,7 @@ Partial Class frmDashboard
         ' lblListTitle
         ' 
         lblListTitle.AutoSize = True
-        lblListTitle.Font = New Font("Segoe UI", 11.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblListTitle.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblListTitle.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblListTitle.Location = New Point(24, 24)
         lblListTitle.Name = "lblListTitle"
@@ -220,7 +221,7 @@ Partial Class frmDashboard
         ' lblStatusMessage
         ' 
         lblStatusMessage.AutoSize = True
-        lblStatusMessage.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblStatusMessage.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblStatusMessage.ForeColor = Color.FromArgb(CByte(107), CByte(114), CByte(128))
         lblStatusMessage.Location = New Point(24, 40)
         lblStatusMessage.Name = "lblStatusMessage"
@@ -230,7 +231,7 @@ Partial Class frmDashboard
         ' lblStudentCount
         ' 
         lblStudentCount.AutoSize = True
-        lblStudentCount.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblStudentCount.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblStudentCount.ForeColor = Color.FromArgb(CByte(75), CByte(85), CByte(99))
         lblStudentCount.Location = New Point(24, 10)
         lblStudentCount.Name = "lblStudentCount"
@@ -242,6 +243,7 @@ Partial Class frmDashboard
         ' 
         pnlHeader.BackColor = Color.RoyalBlue
         pnlHeader.BorderStyle = BorderStyle.FixedSingle
+        pnlHeader.Controls.Add(btnCheckRecords)
         pnlHeader.Controls.Add(lblDashboardTitle)
         pnlHeader.Dock = DockStyle.Top
         pnlHeader.Location = New Point(0, 0)
@@ -250,10 +252,20 @@ Partial Class frmDashboard
         pnlHeader.Size = New Size(1040, 80)
         pnlHeader.TabIndex = 2
         ' 
+        ' btnCheckRecords
+        ' 
+        btnCheckRecords.BackColor = Color.GhostWhite
+        btnCheckRecords.Location = New Point(859, 23)
+        btnCheckRecords.Name = "btnCheckRecords"
+        btnCheckRecords.Size = New Size(143, 36)
+        btnCheckRecords.TabIndex = 3
+        btnCheckRecords.Text = "Check Records"
+        btnCheckRecords.UseVisualStyleBackColor = False
+        ' 
         ' lblDashboardTitle
         ' 
         lblDashboardTitle.AutoSize = True
-        lblDashboardTitle.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDashboardTitle.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblDashboardTitle.ForeColor = Color.FromArgb(CByte(17), CByte(24), CByte(39))
         lblDashboardTitle.Location = New Point(24, 16)
         lblDashboardTitle.Name = "lblDashboardTitle"
@@ -263,7 +275,7 @@ Partial Class frmDashboard
         ' 
         ' frmDashboard
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(243), CByte(244), CByte(246))
         ClientSize = New Size(1260, 700)
@@ -304,4 +316,5 @@ Partial Class frmDashboard
     Friend WithEvents pnlFooter As Panel
     Friend WithEvents lblStudentCount As Label
     Friend WithEvents lblStatusMessage As Label
+    Friend WithEvents btnCheckRecords As Button
 End Class
