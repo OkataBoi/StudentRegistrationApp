@@ -56,6 +56,7 @@ Partial Class frmDatabaseBrowser
         ' lblDbStatus
         ' 
         lblDbStatus.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        lblDbStatus.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         lblDbStatus.Location = New Point(38, 497)
         lblDbStatus.Name = "lblDbStatus"
         lblDbStatus.Size = New Size(94, 38)

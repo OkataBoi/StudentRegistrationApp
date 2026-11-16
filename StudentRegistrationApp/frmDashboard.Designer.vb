@@ -230,16 +230,20 @@ Partial Class frmDashboard
         ' 
         ' btnDatabase
         ' 
-        btnDatabase.Location = New Point(14, 79)
+        btnDatabase.BackColor = Color.RoyalBlue
+        btnDatabase.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnDatabase.ForeColor = Color.Transparent
+        btnDatabase.Location = New Point(37, 79)
         btnDatabase.Name = "btnDatabase"
-        btnDatabase.Size = New Size(125, 36)
+        btnDatabase.Size = New Size(125, 47)
         btnDatabase.TabIndex = 6
         btnDatabase.Text = "Database Students"
-        btnDatabase.UseVisualStyleBackColor = True
+        btnDatabase.UseVisualStyleBackColor = False
         ' 
         ' chkConfirmLoad
         ' 
         chkConfirmLoad.AutoSize = True
+        chkConfirmLoad.BackColor = Color.White
         chkConfirmLoad.Checked = True
         chkConfirmLoad.CheckState = CheckState.Checked
         chkConfirmLoad.Location = New Point(672, 86)
@@ -247,34 +251,43 @@ Partial Class frmDashboard
         chkConfirmLoad.Size = New Size(224, 29)
         chkConfirmLoad.TabIndex = 5
         chkConfirmLoad.Text = "Confirm before loading"
-        chkConfirmLoad.UseVisualStyleBackColor = True
+        chkConfirmLoad.UseVisualStyleBackColor = False
         ' 
         ' btnSaveSettings
         ' 
+        btnSaveSettings.BackColor = Color.RoyalBlue
+        btnSaveSettings.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnSaveSettings.ForeColor = Color.Transparent
         btnSaveSettings.Location = New Point(483, 79)
         btnSaveSettings.Name = "btnSaveSettings"
-        btnSaveSettings.Size = New Size(154, 36)
+        btnSaveSettings.Size = New Size(154, 47)
         btnSaveSettings.TabIndex = 4
         btnSaveSettings.Text = "Save Settings"
-        btnSaveSettings.UseVisualStyleBackColor = True
+        btnSaveSettings.UseVisualStyleBackColor = False
         ' 
         ' btnLoadFile
         ' 
+        btnLoadFile.BackColor = Color.RoyalBlue
+        btnLoadFile.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnLoadFile.ForeColor = Color.Transparent
         btnLoadFile.Location = New Point(330, 79)
         btnLoadFile.Name = "btnLoadFile"
-        btnLoadFile.Size = New Size(125, 36)
+        btnLoadFile.Size = New Size(125, 47)
         btnLoadFile.TabIndex = 3
         btnLoadFile.Text = "Load File"
-        btnLoadFile.UseVisualStyleBackColor = True
+        btnLoadFile.UseVisualStyleBackColor = False
         ' 
         ' btnSaveFile
         ' 
-        btnSaveFile.Location = New Point(170, 79)
+        btnSaveFile.BackColor = Color.RoyalBlue
+        btnSaveFile.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnSaveFile.ForeColor = Color.Transparent
+        btnSaveFile.Location = New Point(184, 79)
         btnSaveFile.Name = "btnSaveFile"
-        btnSaveFile.Size = New Size(125, 36)
+        btnSaveFile.Size = New Size(125, 47)
         btnSaveFile.TabIndex = 2
         btnSaveFile.Text = "Save File"
-        btnSaveFile.UseVisualStyleBackColor = True
+        btnSaveFile.UseVisualStyleBackColor = False
         ' 
         ' lblStatusMessage
         ' 
@@ -313,9 +326,10 @@ Partial Class frmDashboard
         ' btnCheckRecords
         ' 
         btnCheckRecords.BackColor = Color.GhostWhite
-        btnCheckRecords.Location = New Point(859, 23)
+        btnCheckRecords.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnCheckRecords.Location = New Point(837, 23)
         btnCheckRecords.Name = "btnCheckRecords"
-        btnCheckRecords.Size = New Size(143, 36)
+        btnCheckRecords.Size = New Size(165, 47)
         btnCheckRecords.TabIndex = 3
         btnCheckRecords.Text = "Check Records"
         btnCheckRecords.UseVisualStyleBackColor = False
