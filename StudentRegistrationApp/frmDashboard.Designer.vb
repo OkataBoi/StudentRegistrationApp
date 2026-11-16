@@ -30,6 +30,10 @@ Partial Class frmDashboard
         dgvStudents = New DataGridView()
         lblListTitle = New Label()
         pnlFooter = New Panel()
+        chkConfirmLoad = New CheckBox()
+        btnSaveSettings = New Button()
+        btnLoadFile = New Button()
+        btnSaveFile = New Button()
         lblStatusMessage = New Label()
         lblStudentCount = New Label()
         pnlHeader = New Panel()
@@ -94,7 +98,7 @@ Partial Class frmDashboard
         pnlContent.Location = New Point(0, 80)
         pnlContent.Name = "pnlContent"
         pnlContent.Padding = New Padding(24)
-        pnlContent.Size = New Size(1040, 540)
+        pnlContent.Size = New Size(1040, 477)
         pnlContent.TabIndex = 3
         ' 
         ' pnlPreview
@@ -108,7 +112,7 @@ Partial Class frmDashboard
         pnlPreview.Location = New Point(556, 24)
         pnlPreview.Name = "pnlPreview"
         pnlPreview.Padding = New Padding(24)
-        pnlPreview.Size = New Size(460, 492)
+        pnlPreview.Size = New Size(460, 429)
         pnlPreview.TabIndex = 1
         ' 
         ' btnViewDetails
@@ -119,7 +123,7 @@ Partial Class frmDashboard
         btnViewDetails.FlatStyle = FlatStyle.Flat
         btnViewDetails.Font = New Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnViewDetails.ForeColor = Color.White
-        btnViewDetails.Location = New Point(24, 398)
+        btnViewDetails.Location = New Point(24, 335)
         btnViewDetails.Name = "btnViewDetails"
         btnViewDetails.Padding = New Padding(0, 8, 0, 8)
         btnViewDetails.Size = New Size(410, 68)
@@ -159,7 +163,7 @@ Partial Class frmDashboard
         pnlListSection.Location = New Point(24, 24)
         pnlListSection.Name = "pnlListSection"
         pnlListSection.Padding = New Padding(24)
-        pnlListSection.Size = New Size(992, 492)
+        pnlListSection.Size = New Size(992, 429)
         pnlListSection.TabIndex = 0
         ' 
         ' dgvStudents
@@ -191,7 +195,7 @@ Partial Class frmDashboard
         dgvStudents.RowHeadersWidth = 62
         dgvStudents.RowTemplate.Height = 32
         dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvStudents.Size = New Size(487, 393)
+        dgvStudents.Size = New Size(487, 330)
         dgvStudents.TabIndex = 1
         ' 
         ' lblListTitle
@@ -209,14 +213,57 @@ Partial Class frmDashboard
         ' 
         pnlFooter.BackColor = Color.White
         pnlFooter.BorderStyle = BorderStyle.FixedSingle
+        pnlFooter.Controls.Add(chkConfirmLoad)
+        pnlFooter.Controls.Add(btnSaveSettings)
+        pnlFooter.Controls.Add(btnLoadFile)
+        pnlFooter.Controls.Add(btnSaveFile)
         pnlFooter.Controls.Add(lblStatusMessage)
         pnlFooter.Controls.Add(lblStudentCount)
         pnlFooter.Dock = DockStyle.Bottom
-        pnlFooter.Location = New Point(0, 620)
+        pnlFooter.Location = New Point(0, 557)
         pnlFooter.Name = "pnlFooter"
         pnlFooter.Padding = New Padding(24, 12, 24, 12)
-        pnlFooter.Size = New Size(1040, 80)
+        pnlFooter.Size = New Size(1040, 143)
         pnlFooter.TabIndex = 4
+        ' 
+        ' chkConfirmLoad
+        ' 
+        chkConfirmLoad.AutoSize = True
+        chkConfirmLoad.Checked = True
+        chkConfirmLoad.CheckState = CheckState.Checked
+        chkConfirmLoad.Location = New Point(596, 84)
+        chkConfirmLoad.Name = "chkConfirmLoad"
+        chkConfirmLoad.Size = New Size(224, 29)
+        chkConfirmLoad.TabIndex = 5
+        chkConfirmLoad.Text = "Confirm before loading"
+        chkConfirmLoad.UseVisualStyleBackColor = True
+        ' 
+        ' btnSaveSettings
+        ' 
+        btnSaveSettings.Location = New Point(381, 78)
+        btnSaveSettings.Name = "btnSaveSettings"
+        btnSaveSettings.Size = New Size(154, 36)
+        btnSaveSettings.TabIndex = 4
+        btnSaveSettings.Text = "Save Settings"
+        btnSaveSettings.UseVisualStyleBackColor = True
+        ' 
+        ' btnLoadFile
+        ' 
+        btnLoadFile.Location = New Point(213, 78)
+        btnLoadFile.Name = "btnLoadFile"
+        btnLoadFile.Size = New Size(125, 36)
+        btnLoadFile.TabIndex = 3
+        btnLoadFile.Text = "Load File"
+        btnLoadFile.UseVisualStyleBackColor = True
+        ' 
+        ' btnSaveFile
+        ' 
+        btnSaveFile.Location = New Point(48, 78)
+        btnSaveFile.Name = "btnSaveFile"
+        btnSaveFile.Size = New Size(125, 36)
+        btnSaveFile.TabIndex = 2
+        btnSaveFile.Text = "Save File"
+        btnSaveFile.UseVisualStyleBackColor = True
         ' 
         ' lblStatusMessage
         ' 
@@ -317,4 +364,8 @@ Partial Class frmDashboard
     Friend WithEvents lblStudentCount As Label
     Friend WithEvents lblStatusMessage As Label
     Friend WithEvents btnCheckRecords As Button
+    Friend WithEvents btnSaveFile As Button
+    Friend WithEvents btnSaveSettings As Button
+    Friend WithEvents btnLoadFile As Button
+    Friend WithEvents chkConfirmLoad As CheckBox
 End Class
