@@ -179,4 +179,13 @@ Public Class frmDashboard
         Await RunFileActionAsync(AddressOf SaveSettingsAsync)
     End Sub
 
+    Private Sub chkConfirmLoad_CheckedChanged(sender As Object, e As EventArgs) Handles chkConfirmLoad.CheckedChanged
+
+    End Sub
+
+    Private Sub btnDatabase_Click(sender As Object, e As EventArgs) Handles btnDatabase.Click
+        Using form As New frmDatabaseBrowser()
+            form.ShowDialog(Me)
+        End Using
+    End Sub
 End Class

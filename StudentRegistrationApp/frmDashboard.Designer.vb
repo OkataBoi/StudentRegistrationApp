@@ -30,6 +30,7 @@ Partial Class frmDashboard
         dgvStudents = New DataGridView()
         lblListTitle = New Label()
         pnlFooter = New Panel()
+        btnDatabase = New Button()
         chkConfirmLoad = New CheckBox()
         btnSaveSettings = New Button()
         btnLoadFile = New Button()
@@ -213,6 +214,7 @@ Partial Class frmDashboard
         ' 
         pnlFooter.BackColor = Color.White
         pnlFooter.BorderStyle = BorderStyle.FixedSingle
+        pnlFooter.Controls.Add(btnDatabase)
         pnlFooter.Controls.Add(chkConfirmLoad)
         pnlFooter.Controls.Add(btnSaveSettings)
         pnlFooter.Controls.Add(btnLoadFile)
@@ -226,12 +228,21 @@ Partial Class frmDashboard
         pnlFooter.Size = New Size(1040, 143)
         pnlFooter.TabIndex = 4
         ' 
+        ' btnDatabase
+        ' 
+        btnDatabase.Location = New Point(14, 79)
+        btnDatabase.Name = "btnDatabase"
+        btnDatabase.Size = New Size(125, 36)
+        btnDatabase.TabIndex = 6
+        btnDatabase.Text = "Database Students"
+        btnDatabase.UseVisualStyleBackColor = True
+        ' 
         ' chkConfirmLoad
         ' 
         chkConfirmLoad.AutoSize = True
         chkConfirmLoad.Checked = True
         chkConfirmLoad.CheckState = CheckState.Checked
-        chkConfirmLoad.Location = New Point(596, 84)
+        chkConfirmLoad.Location = New Point(672, 86)
         chkConfirmLoad.Name = "chkConfirmLoad"
         chkConfirmLoad.Size = New Size(224, 29)
         chkConfirmLoad.TabIndex = 5
@@ -240,7 +251,7 @@ Partial Class frmDashboard
         ' 
         ' btnSaveSettings
         ' 
-        btnSaveSettings.Location = New Point(381, 78)
+        btnSaveSettings.Location = New Point(483, 79)
         btnSaveSettings.Name = "btnSaveSettings"
         btnSaveSettings.Size = New Size(154, 36)
         btnSaveSettings.TabIndex = 4
@@ -249,7 +260,7 @@ Partial Class frmDashboard
         ' 
         ' btnLoadFile
         ' 
-        btnLoadFile.Location = New Point(213, 78)
+        btnLoadFile.Location = New Point(330, 79)
         btnLoadFile.Name = "btnLoadFile"
         btnLoadFile.Size = New Size(125, 36)
         btnLoadFile.TabIndex = 3
@@ -258,7 +269,7 @@ Partial Class frmDashboard
         ' 
         ' btnSaveFile
         ' 
-        btnSaveFile.Location = New Point(48, 78)
+        btnSaveFile.Location = New Point(170, 79)
         btnSaveFile.Name = "btnSaveFile"
         btnSaveFile.Size = New Size(125, 36)
         btnSaveFile.TabIndex = 2
@@ -368,4 +379,5 @@ Partial Class frmDashboard
     Friend WithEvents btnSaveSettings As Button
     Friend WithEvents btnLoadFile As Button
     Friend WithEvents chkConfirmLoad As CheckBox
+    Friend WithEvents btnDatabase As Button
 End Class

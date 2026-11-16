@@ -5,6 +5,7 @@
     Public Property Phone As String
     Public Property BirthDate As Date
     Public Property Address As String
+    Public Property Id As Integer
 
     Public Overrides Function ToString() As String
         Return FullName & " - " & Programme
